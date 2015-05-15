@@ -1,6 +1,6 @@
 #Cloud Foundry on OpenStack Hands-On Labs
 
-##Prerequisites
+##Pre-requisites
 
 Needless to say you'll need a laptop! For best experience, a Mac or Linux environment is preferred. In addition we'll need the following software pre-installed.
 
