@@ -4,22 +4,54 @@
 
 Make sure you've installed the stackato CLI for accessing the Cloud Foundry instance.
 
-Target the Cloud Foundry instance by substituting the URL with the one provided.
+Target the Cloud Foundry instance by substituting the URL with the one provided and use the following command.
 
 ```
-cf target https://api.15.125.77.39.xip.io
+cf api --skip-ssl-validation https://api.15.125.77.39.xip.io
 ```
 
 The output should look something like below.
 
 ```
-Successfully targeted to [https://api.15.125.77.39.xip.io]
-Target:       https://api.15.125.77.39.xip.io
-Organization: workshop-org
-Space:        workshop-space
+Setting api endpoint to https://api.15.125.77.39.xip.io...
+OK
+
+                   
+API endpoint:   https://api.15.125.77.39.xip.io (API version: 2.8.0)   
+Not logged in. Use 'cf login' to log in.
 ```
 
-You can verify the applications running with the following command.
+You can log in with the following command. Login credentials will be provided.
+
+```
+cf login
+```
+
+The output will look something line below.
+
+```
+API endpoint: https://api.15.125.77.39.xip.io
+
+Username> rags
+
+Password> 
+Authenticating...
+OK
+
+Targeted org workshop-org
+
+Targeted space workshop-space
+
+
+                   
+API endpoint:   https://api.15.125.77.39.xip.io (API version: 2.8.0)   
+User:           rags@acm.org   
+Org:            workshop-org   
+Space:          workshop-space
+```
+
+
+You can verify that you are targeted and logged in by running with the following command.
 
 ```
 cf apps
