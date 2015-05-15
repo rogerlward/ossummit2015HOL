@@ -1,6 +1,6 @@
 #Cloud Foundry on OpenStack Hands-On Labs
 
-##Pre-requisites
+##Prerequisites
 
 Needless to say you'll need a laptop! For best experience, a Mac or Linux environment is preferred. In addition we'll need the following software pre-installed.
 
@@ -32,7 +32,7 @@ It is recommended that you run through these exercises sequentially since they a
 
 - Exercise 1: [Target the Cloud Foundry Instance](ex1)
 - Exercise 2: [Push your application] (ex2)
-- Exercise 3: [More CLI commands and manifest.yml] (ex3)
+- Exercise 3: [manifest.yml and more CLI commands] (ex3)
 - Exercise 4: [Connect to a service] (ex4)
 - Exercise 5: [Scale your application] (ex5)
 - Exercise 6: [Health Monitoring] (ex6)
