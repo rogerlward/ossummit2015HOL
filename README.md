@@ -53,10 +53,3 @@ These exercises are optional. Try them if you have some time to spare!
 ##More Resources
 
 ##Contact
-
-
-
-
-
-
-
