@@ -1,0 +1,100 @@
+#Cloud Foundry on OpenStack Hands-On Labs
+
+##Exercise 4: Connect to a service
+
+Services are not part of the Cloud Foundry Elastic Runtime but they are an essential part of application deployment, like connecting to a MySQL database, a NoSQL database like MongoDB or Redis and so on.
+
+In principle, they comprise of the following steps.
+
+- Pick a service via the Marketplace
+- Create the service
+- Bind the application to the service (or connect to the service by an explicit binding in manifest.yml)
+
+We started the application previously without connecting to a service. We will now connect to a service.
+
+First, let's explore the marketplace with the following command.
+
+```
+cf marketplace
+```
+
+You should get a listing of the different offerings, plans and so on as below.
+
+```
+https://api.15.125.77.39.xip.io -> workshop-org -> workshop-space
++------------+------+------------------------------------------+---------+------+--------+----------+---------+--------+------+
+| Vendor     | Plan | Description                              | Details | Free | Public | Provider | Version | Broker | Orgs |
++------------+------+------------------------------------------+---------+------+--------+----------+---------+--------+------+
+| filesystem | free | Persistent filesystem service            | free    | yes  | yes    | core     | 1.0     |        |      |
+| harbor     | free | External port mapping service            | free    | yes  | yes    | core     | 1.0     |        |      |
+| memcached  | free | Memcached in-memory object cache service | free    | yes  | yes    | core     | 1.4     |        |      |
+| mongodb    | free | MongoDB NoSQL store                      | free    | yes  | yes    | core     | 2.4     |        |      |
+| mysql      | free | MySQL database service                   | free    | yes  | yes    | core     | 5.5     |        |      |
+| postgresql | free | PostgreSQL database service              | free    | yes  | yes    | core     | 9.1     |        |      |
+| rabbitmq   | free | RabbitMQ message queue                   | free    | yes  | yes    | core     | 2.8     |        |      |
+| rabbitmq3  | free | RabbitMQ message queue                   | free    | yes  | yes    | core     | 3.1     |        |      |
+| redis      | free | Redis key-value store service            | free    | yes  | yes    | core     | 2.8     |        |      |
++------------+------+------------------------------------------+---------+------+--------+----------+---------+--------+------+
+```
+
+We pick a RabbitMQ service to connect with the application as below.
+
+```
+cf create-service rabbitmq rabbitmq --plan free
+```
+
+You should see a response like below.
+
+```
+  Creating new service ... OK
+```
+
+If you run the command
+```
+```
+You should see an output that looks something like below. The column Application that is blank indicates that no application is bound to it (yet).
+
+```
++------------------------------+----------------+----------+----------+---------+------+------------------+
+| Space                        | Name           | Service  | Provider | Version | Plan | Applications     |
++------------------------------+----------------+----------+----------+---------+------+------------------+
+| workshop-org::workshop-space | rabbitmq       | rabbitmq | core     | 2.8     | free |                  
++------------------------------+----------------+----------+----------+---------+------+------------------+
+```
+
+Next, we bind the service to the application using the following command. If necessary, restage the application.
+
+```
+cf bind-service rabbitmq pcfdemo
+```
+
+You should see an output that looks something like below.
+
+```
+  Binding [rabbitmq] to pcfdemo ... 
+Stopping Application [pcfdemo] ... OK
+Starting Application [pcfdemo] ... 
+OK
+http://pcfdemo-adabb.15.125.77.39.xip.io/ deployed
+```
+
+If you browse to the URL above, you should see a message "Data being streamed from RabbitMQ," indicating that the rabbitmq service was bound to the application. You can rerun the `cf services` command to verify this.
+
+If you click on any state you will notice that data is indeed being streamed via RabbitMQ.
+
+Can you try to unbind the service from the application with an appropriate CLI command (hint: `unbind-service`)?
+
+Now that we've connected to the service, we will scale it.
+
+
+
+
+
+
+
+
+
+
+
+
+

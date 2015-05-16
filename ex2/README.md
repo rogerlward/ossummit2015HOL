@@ -49,9 +49,9 @@ Which should produce an output that looks something like below.
 +------------------+---+-----+---------+---------------------------------------------------+----------------+
 ```
 
-If you browse the URL provided you should be able to see a heat map that is not yet active since we've not connected to a service.
+If you browse the URL provided you should be able to see a heat map that is not yet active since we've not connected to a service. You will also notice a message "No RabbitMQ service bound - streaming is not active" indicating that the RabbitMQ service is not hooked up the application, yet.
 
-We will connect to a service, next.
+We will connect to a service, subsequently.
 
 
 
