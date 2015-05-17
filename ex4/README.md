@@ -92,6 +92,13 @@ You can accomplish the same by adding the following line into manifest.yml somew
   services: [rabbitmq]
 ```
 
+Run the following command after connecting to a service.
+
+```
+cf env pcfdemo
+```
+
+This will output the connection credentials to the service via variables in the environment that the application uses to determine if connected to the RabbitMQ service and how to connect to it.
 
 Now that we've connected to the service, we will scale it.
 
