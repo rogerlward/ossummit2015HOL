@@ -84,6 +84,15 @@ If you click on any state you will notice that data is indeed being streamed via
 
 Can you try to unbind the service from the application with an appropriate CLI command (hint: `unbind-service`)?
 
+You can accomplish the same by adding the following line into manifest.yml somewhere, for example, after the `  instances: 1` line as below and then pushing the application again.
+
+
+```
+  instances: 1
+  services: [rabbitmq]
+```
+
+
 Now that we've connected to the service, we will scale it.
 
 

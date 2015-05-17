@@ -52,8 +52,9 @@ Try stopping and restarting the applicaton. If you need help with the different 
 cf --help
 ```
 
-Try other commands that catch your fancy. We will connect to a service, next.
+Try other commands and changes to `manifest.yml` that catch your fancy.
 
+We will connect to a service, next.
 
 
 
