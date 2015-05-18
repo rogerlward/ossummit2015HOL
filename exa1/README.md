@@ -1,13 +1,3 @@
----
-layout: page
-title: Admin Exercise 1: Orgs, Spaces, Domains
-header: Posts By Category
-group: navigation
----
-{% include JB/setup %}
-
-#Cloud Foundry on OpenStack Hands-On Labs
-
 ##Admin Exercise 1: Organizations, Spaces, and Domains
 
 Cloud Foundry is a multi-tenent PaaS, allowing multiple users,
