@@ -57,56 +57,14 @@ Routes: https://api.15.126.133.139.xip.io -> workshop -> workshop
 +----------------------------------------------+--------------------+-----------------+
 ```
 
-We will traverse to the sub-directory ex3 and make a change to `manifest.yml` as below, noting that we switched to a backup route.
+We map the Blue application to another route (just in case) and we map the new application to the old (or current route as below.
 
 ```
----
-applications:
-- name: pcfdemo
-  memory: 512M 
-  instances: 1
-  host: pcfdemo-rags-old
-  path: ./target/pcfdemo.war
-  env:
-   JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
-```
+cf map pcfdemo pcfdemo-rags-old.15.126.133.139.xip.io'
+cf unmap pcfdemo pcfdemo-a64c4.15.126.133.139.xip.io
+cf map pcfdemo-green pcfdemo-a64c4.15.126.133.139.xip.io
+cf unmap pcfdemo-green pcfdemo-613d1.15.126.133.139.xip.io
 
-push the application with the following command.
-
-
-```
-cf push -n --reset
-```
-
-and you should see an output (partial output shown) that looks like below.
-
-```
-  Unmap http://pcfdemo-a64c4.15.126.133.139.xip.io ... OK
-  Map http://pcfdemo-rags-old.15.126.133.139.xip.io ... OK
-```
-
-Back to the ex8 subdirectory.
-
-We modify the `manifest.yml` directory to update the Green deployment to the original route as below.
-
-```
----
-applications:
-- name: pcfdemo-green
-  memory: 512M 
-  instances: 1
-  services: [rabbitmq]
-  host: pcfdemo-a64c4
-  path: ./target/pcfdemo-green.war
-  env:
-   JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
-```
-
-We push it as before.
-
-
-```
-cf push -n --reset
 ```
 
 Now, the Green deployment has been switched over  which can be verified as below
