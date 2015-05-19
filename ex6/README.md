@@ -4,6 +4,12 @@
 
 Health Monitoring happens at multiple levels. In the case of application level health monotring, the platform does a periodic health check and effectively restarts the program if it's down. There is really nothing else that an application developer has to do or to program.
 
+We will scale down the application to a single instance with the following command.
+
+```
+cf scale pcfdemo -i=1
+```
+
 If you go back to the application URL, you will notice a button "KILL APP" which is used to exit the application.
 
 When you hit this button, the platform that is continually monitoring the health of the application will bring it back to a desired state, when the actual state does not match the desired state.

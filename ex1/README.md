@@ -7,18 +7,16 @@ Make sure you've installed the stackato CLI for accessing the Cloud Foundry inst
 Target the Cloud Foundry instance by substituting the URL with the one provided and use the following command.
 
 ```
-cf api --skip-ssl-validation https://api.15.125.77.39.xip.io
+cf target https://api.15.125.77.39.xip.io
 ```
 
 The output should look something like below.
 
 ```
-Setting api endpoint to https://api.15.125.77.39.xip.io...
-OK
-
-                   
-API endpoint:   https://api.15.125.77.39.xip.io (API version: 2.8.0)   
-Not logged in. Use 'cf login' to log in.
+Successfully targeted to [https://api.15.126.133.139.xip.io]
+Target:       https://api.15.126.133.139.xip.io
+Organization: <none>
+Space:        <none>
 ```
 
 You can log in with the following command. Login credentials will be provided.
@@ -30,24 +28,20 @@ cf login
 The output will look something line below.
 
 ```
-API endpoint: https://api.15.125.77.39.xip.io
-
-Username> rags
-
-Password> 
-Authenticating...
-OK
-
-Targeted org workshop-org
-
-Targeted space workshop-space
-
-
-                   
-API endpoint:   https://api.15.125.77.39.xip.io (API version: 2.8.0)   
-User:           rags@acm.org   
-Org:            workshop-org   
-Space:          workshop-space
+SSL warning for "api.15.126.133.139.xip.io": self signed certificate
+SSL warning for "aok.15.126.133.139.xip.io": self signed certificate
+Attempting login to [https://api.15.126.133.139.xip.io]
+Username: rags
+Password: 
+Successfully logged into [https://api.15.126.133.139.xip.io]
+rags Choosing the one available organization: "workshop"
+Choosing the one available space: "workshop"
+Target:       https://api.15.126.133.139.xip.io
+Organization: workshop
+Space:        workshop
+No license installed.
+Using 39G of 4G (35 over licensed limit).
+Buy a license: http://www.activestate.com/contact-stackato
 ```
 
 
@@ -84,10 +78,3 @@ You should see an output that lists the different services and the plans that ha
 We will be pushing an app. and connecting to a service in the upcoming exercises.
 
 You can also try additional options for the CLI.
-
-
-
-
-
-
-

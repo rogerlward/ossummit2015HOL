@@ -26,7 +26,7 @@ The manifest.yml file is used for deployment if it's available and it's used to 
 Change the instances to 2, and push the application again with the following command.
 
 ```
-cf push
+cf push -n --reset
 ```
 You should see an output (partially reproduced) which shows the instances changed from 1 to 2.
 
@@ -40,7 +40,7 @@ Also, notice the differences by running the following command which should show 
 cf apps
 ```
 
-Try restaging the application with the following command
+If necessary, try restaging the application with the following command
 
 ```
 cf restage pcfdemo

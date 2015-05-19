@@ -37,7 +37,7 @@ https://api.15.125.77.39.xip.io -> workshop-org -> workshop-space
 +------------+------+------------------------------------------+---------+------+--------+----------+---------+--------+------+
 ```
 
-We pick a RabbitMQ service to connect with the application as below.
+We pick a RabbitMQ service to connect with the application as below. It is strongly recommended that you provide an unique name for the service.
 
 ```
 cf create-service rabbitmq rabbitmq --plan free
