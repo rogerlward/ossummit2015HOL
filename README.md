@@ -5,7 +5,6 @@
 Needless to say you'll need a laptop! For best experience, a Mac or Linux environment is preferred. In addition we'll need the following software pre-installed.
 
 - [Git](http://git-scm.com/downloads) or "brew install git"	
-- A [GitHub](https://github.com) account
 - [The stackato CLI] (http://www.activestate.com/stackato/download_client) - download the latest version that is appropriate for your laptop and follow the instructions in README.txt. 
 
 Create an alias for stackato as cf. You can create an alias for ```stackato``` as ```cf``` in which case the stackato CLI commands will be approximately similar to the cf CLI commands.
