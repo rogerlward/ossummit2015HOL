@@ -7,13 +7,17 @@ Needless to say you'll need a laptop! For best experience, a Mac or Linux enviro
 - [Git](http://git-scm.com/downloads) or "brew install git"	
 - [The stackato CLI] (http://www.activestate.com/stackato/download_client) - download the latest version that is appropriate for your laptop and follow the instructions in README.txt.
 
-We want to provide you choices for deployment. We've tested the exercises on
+During the HOL, we will help you with a sandbox environment (the details are below).
+
+However, we want to provide you choices for deployment. We've tested the exercises on multiple instances.
 
 - [https://run.pivotal.io/](https://run.pivotal.io/)
 - [https://console.ng.bluemix.net/] (https://console.ng.bluemix.net/)
 - [http://www.activestate.com/stackato/sandbox] (http://www.activestate.com/stackato/sandbox)
 
-During the HOL, we will help you with a sandbox environment (the details are below).
+##Hands-on Labs Cloud Foundry Instance
+
+We will be targeting a Cloud Foundry instance that will being used during the Hands-on Labs.
 
 Create an alias for stackato as cf. You can create an alias for ```stackato``` as ```cf``` in which case the stackato CLI commands will be approximately similar to the cf CLI commands.
 
@@ -43,7 +47,7 @@ cf --help
 
 Each directory is in a separate sub-directory. ***Ensure that you're in the sub-directory when you're working on a particular exercise and you're issuing the CLI commands from the subdirectory pertaining to the exercise.***
 
-We've provided a number of samples. The **instructions will refer to the PCF-demo sample application** but they can be applied to the Node app. or other apps as well.
+We've also provided a choice of samples. The **instructions will refer to the PCF-demo sample application** but they can be applied to the Node app. or other apps as well.
 
 
 ##Recommended Exercises - User Related
