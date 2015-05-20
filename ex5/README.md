@@ -34,7 +34,7 @@ Should yield the following output showing that there are 3 instances of the appl
 +-------------+---+-----+---------+------------------------------------------+----------+
 | Application | # | Mem | Health  | URLs                                     | Services |
 +-------------+---+-----+---------+------------------------------------------+----------+
-| pcfdemo     | 2 | 512 | RUNNING | http://pcfdemo-adabb.15.125.77.39.xip.io | rabbitmq |
+| pcfdemo     | 2 | 300 | RUNNING | http://pcfdemo-adabb.15.125.77.39.xip.io | rabbitmq |
 +-------------+---+-----+---------+------------------------------------------+----------+
 ```
 

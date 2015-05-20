@@ -55,8 +55,3 @@ cf --help
 Change the instances back to 1. Try other commands and changes to `manifest.yml` that catch your fancy and push the app again.
 
 We will connect to a service, next.
-
-
-
-
-

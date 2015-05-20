@@ -76,8 +76,8 @@ Which should yield an output like below.
 +-----------------+---+-----+---------+-----------------------------------------------+--------------------+
 | Application     | # | Mem | Health  | URLs                                          | Services           |
 +-----------------+---+-----+---------+-----------------------------------------------+--------------------+
-| pcfdemo         | 1 | 512 | RUNNING | http://pcfdemo-rags-old.15.126.133.139.xip.io | rabbitmq           |
-| pcfdemo-green   | 1 | 512 | RUNNING | http://pcfdemo-a64c4.15.126.133.139.xip.io    | rabbitmq-rags      |
+| pcfdemo         | 1 | 300 | RUNNING | http://pcfdemo-rags-old.15.126.133.139.xip.io | rabbitmq           |
+| pcfdemo-green   | 1 | 300 | RUNNING | http://pcfdemo-a64c4.15.126.133.139.xip.io    | rabbitmq           |
 +-----------------+---+-----+---------+-----------------------------------------------+--------------------+
 ```
 

@@ -37,7 +37,7 @@ Which should produce an output that looks something like below.
 +-------------+---+-----+---------+--------------------------------------------+----------+
 | Application | # | Mem | Health  | URLs                                       | Services |
 +-------------+---+-----+---------+--------------------------------------------+----------+
-| pcfdemo     | 1 | 512 | RUNNING | http://pcfdemo-53590.15.126.133.139.xip.io |          |
+| pcfdemo     | 1 | 300 | RUNNING | http://pcfdemo-53590.15.126.133.139.xip.io |          |
 +-------------+---+-----+---------+--------------------------------------------+----------+
 ```
 
@@ -49,7 +49,23 @@ You can get the application logs with the following command. We will sibsequentl
 cf logs pcfdemo
 ```
 
-We will connect to a service, subsequently.
+You can delete the application with the following command 
+
+```
+cf delete -n pcfdemo
+```
+
+and verify that it is deleted as below.
+
+```
+cf apps
+```
+
+```
+No Applications
+```
+
+We will look at the manifest file and connect to a service, subsequently.
 
 
 

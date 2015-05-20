@@ -1,6 +1,6 @@
 #Cloud Foundry on OpenStack Hands-On Labs
 
-##Exercise 8: Drain Logs
+##Exercise 7: Drain Logs
 
 Applications log to stdout in syslog format that can be redirected to a log provider. We will look at [papertrail] (https://papertrailapp.com/) for this.
 
@@ -17,5 +17,3 @@ cf restage pcfdemo
 ```
 
 That's it to consolidate your logging.
-
-
