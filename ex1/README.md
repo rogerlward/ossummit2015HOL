@@ -2,7 +2,7 @@
 
 ##Exercise 1: Target the Cloud Foundry instance
 
-Make sure you've installed the stackato CLI for accessing the Cloud Foundry instance.
+Make sure you've installed the stackato CLI and created an alias for accessing the Cloud Foundry instance.
 
 Target the Cloud Foundry instance by substituting the URL with the one provided and use the following command.
 
@@ -15,33 +15,25 @@ The output should look something like below.
 ```
 Successfully targeted to [https://api.15.126.133.139.xip.io]
 Target:       https://api.15.126.133.139.xip.io
-Organization: <none>
-Space:        <none>
+Organization: workshop
+Space:        workshop
 ```
 
 You can log in with the following command. Login credentials will be provided.
 
 ```
-cf login
+cf login username
 ```
 
 The output will look something line below.
 
 ```
-SSL warning for "api.15.126.133.139.xip.io": self signed certificate
-SSL warning for "aok.15.126.133.139.xip.io": self signed certificate
 Attempting login to [https://api.15.126.133.139.xip.io]
-Username: rags
-Password: 
+Password:
 Successfully logged into [https://api.15.126.133.139.xip.io]
-rags Choosing the one available organization: "workshop"
-Choosing the one available space: "workshop"
 Target:       https://api.15.126.133.139.xip.io
-Organization: workshop
-Space:        workshop
-No license installed.
-Using 39G of 4G (35 over licensed limit).
-Buy a license: http://www.activestate.com/contact-stackato
+Organization: org
+Space:        space
 ```
 
 
@@ -60,19 +52,17 @@ cf marketplace
 You should see an output that lists the different services and the plans that have been pre-installed for your convenience.
 
 ```
-+------------+------+------------------------------------------+---------+------+--------+----------+---------+--------+------+
-| Vendor     | Plan | Description                              | Details | Free | Public | Provider | Version | Broker | Orgs |
-+------------+------+------------------------------------------+---------+------+--------+----------+---------+--------+------+
-| filesystem | free | Persistent filesystem service            | free    | yes  | yes    | core     | 1.0     |        |      |
-| harbor     | free | External port mapping service            | free    | yes  | yes    | core     | 1.0     |        |      |
-| memcached  | free | Memcached in-memory object cache service | free    | yes  | yes    | core     | 1.4     |        |      |
-| mongodb    | free | MongoDB NoSQL store                      | free    | yes  | yes    | core     | 2.4     |        |      |
-| mysql      | free | MySQL database service                   | free    | yes  | yes    | core     | 5.5     |        |      |
-| postgresql | free | PostgreSQL database service              | free    | yes  | yes    | core     | 9.1     |        |      |
-| rabbitmq   | free | RabbitMQ message queue                   | free    | yes  | yes    | core     | 2.8     |        |      |
-| rabbitmq3  | free | RabbitMQ message queue                   | free    | yes  | yes    | core     | 3.1     |        |      |
-| redis      | free | Redis key-value store service            | free    | yes  | yes    | core     | 2.8     |        |      |
-+------------+------+------------------------------------------+---------+------+--------+----------+---------+--------+------+
++------------+------+------------------------------------------+-------------------+------+--------+----------+---------+--------+------+
+| Vendor     | Plan | Description                              | Details           | Free | Public | Provider | Version | Broker | Orgs |
++------------+------+------------------------------------------+-------------------+------+--------+----------+---------+--------+------+
+| filesystem | free | Persistent filesystem service            | dummy description | yes  | yes    | core     | 1.0     |        |      |
+| memcached  | free | Memcached in-memory object cache service | dummy description | yes  | yes    | core     | 1.4     |        |      |
+| mongodb    | free | MongoDB NoSQL store                      | dummy description | yes  | yes    | core     | 2.4     |        |      |
+| mysql      | free | MySQL database service                   | dummy description | yes  | yes    | core     | 5.5     |        |      |
+| postgresql | free | PostgreSQL database service              | dummy description | yes  | yes    | core     | 9.1     |        |      |
+| rabbitmq3  | free | RabbitMQ message queue                   | dummy description | yes  | yes    | core     | 3.1     |        |      |
+| redis      | free | Redis key-value store service            | dummy description | yes  | yes    | core     | 2.8     |        |      |
++------------+------+------------------------------------------+-------------------+------+--------+----------+---------+--------+------+
 ```
 
 We will be pushing an app. and connecting to a service in the upcoming exercises.

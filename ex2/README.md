@@ -16,9 +16,6 @@ You should see at output something like below.
 
 ```
 Using manifest file "manifest.yml"
-No license installed.
-Using 39G of 4G (35 over licensed limit).
-Buy a license: http://www.activestate.com/contact-stackato
 Instances:         1
 Application Url:   http://pcfdemo-53590.15.126.133.139.xip.io
 

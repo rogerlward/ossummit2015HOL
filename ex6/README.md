@@ -31,4 +31,3 @@ Instance hosted at  172.17.0.162:45087
 Just like that, with absolutely nothing required to be done by the application developer we see how health monitoring of the application is being done by the platform.
 
 Next, we will look at how to drain logs.
-

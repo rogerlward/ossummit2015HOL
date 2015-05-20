@@ -8,7 +8,7 @@ Notice the manifest.yml in this directory. Its contents looks something like bel
 ---
 applications:
 - name: pcfdemo
-  memory: 512M 
+  memory: 300M 
   instances: 1
   host: pcfdemo-${random-word}
   path: ./target/pcfdemo.war
@@ -52,7 +52,7 @@ Try stopping and restarting the applicaton. If you need help with the different 
 cf --help
 ```
 
-Try other commands and changes to `manifest.yml` that catch your fancy.
+Change the instances back to 1. Try other commands and changes to `manifest.yml` that catch your fancy and push the app again.
 
 We will connect to a service, next.
 

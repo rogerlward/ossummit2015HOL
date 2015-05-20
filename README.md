@@ -5,7 +5,15 @@
 Needless to say you'll need a laptop! For best experience, a Mac or Linux environment is preferred. In addition we'll need the following software pre-installed.
 
 - [Git](http://git-scm.com/downloads) or "brew install git"	
-- [The stackato CLI] (http://www.activestate.com/stackato/download_client) - download the latest version that is appropriate for your laptop and follow the instructions in README.txt. 
+- [The stackato CLI] (http://www.activestate.com/stackato/download_client) - download the latest version that is appropriate for your laptop and follow the instructions in README.txt.
+
+We want to provide you choices for deployment. We've tested the exercises on
+
+- [https://run.pivotal.io/](https://run.pivotal.io/)
+- [https://console.ng.bluemix.net/] (https://console.ng.bluemix.net/)
+- [http://www.activestate.com/stackato/sandbox] (http://www.activestate.com/stackato/sandbox)
+
+During the HOL, we will help you with a sandbox environment (the details are below).
 
 Create an alias for stackato as cf. You can create an alias for ```stackato``` as ```cf``` in which case the stackato CLI commands will be approximately similar to the cf CLI commands.
 
@@ -31,6 +39,13 @@ or
 cf --help
 ```
 
+##Samples and General Directions
+
+Each directory is in a separate sub-directory. ***Ensure that you're in the sub-directory when you're working on a particular exercise and you're issuing the CLI commands from the subdirectory pertaining to the exercise.***
+
+We've provided a number of samples. The **instructions will refer to the PCF-demo sample application** but they can be applied to the Node app. or other apps as well.
+
+
 ##Recommended Exercises - User Related
 
 It is recommended that you run through these exercises sequentially since they are progressive with some dependencies. Each exercise should take about 5-10 mins. to complete.
@@ -48,7 +63,6 @@ It is recommended that you run through these exercises sequentially since they a
 
 - Exercise 1: [Quotas] (exa1)
 - Exercise 2: [Security Groups] (exa2)
-- Exercise 3: [Create a Service Broker] (exa3)
 
 ##More Resources
 

@@ -21,26 +21,23 @@ cf marketplace
 You should get a listing of the different offerings, plans and so on as below.
 
 ```
-https://api.15.125.77.39.xip.io -> workshop-org -> workshop-space
-+------------+------+------------------------------------------+---------+------+--------+----------+---------+--------+------+
-| Vendor     | Plan | Description                              | Details | Free | Public | Provider | Version | Broker | Orgs |
-+------------+------+------------------------------------------+---------+------+--------+----------+---------+--------+------+
-| filesystem | free | Persistent filesystem service            | free    | yes  | yes    | core     | 1.0     |        |      |
-| harbor     | free | External port mapping service            | free    | yes  | yes    | core     | 1.0     |        |      |
-| memcached  | free | Memcached in-memory object cache service | free    | yes  | yes    | core     | 1.4     |        |      |
-| mongodb    | free | MongoDB NoSQL store                      | free    | yes  | yes    | core     | 2.4     |        |      |
-| mysql      | free | MySQL database service                   | free    | yes  | yes    | core     | 5.5     |        |      |
-| postgresql | free | PostgreSQL database service              | free    | yes  | yes    | core     | 9.1     |        |      |
-| rabbitmq   | free | RabbitMQ message queue                   | free    | yes  | yes    | core     | 2.8     |        |      |
-| rabbitmq3  | free | RabbitMQ message queue                   | free    | yes  | yes    | core     | 3.1     |        |      |
-| redis      | free | Redis key-value store service            | free    | yes  | yes    | core     | 2.8     |        |      |
-+------------+------+------------------------------------------+---------+------+--------+----------+---------+--------+------+
++------------+------+------------------------------------------+-------------------+------+--------+----------+---------+--------+------+
+| Vendor     | Plan | Description                              | Details           | Free | Public | Provider | Version | Broker | Orgs |
++------------+------+------------------------------------------+-------------------+------+--------+----------+---------+--------+------+
+| filesystem | free | Persistent filesystem service            | dummy description | yes  | yes    | core     | 1.0     |        |      |
+| memcached  | free | Memcached in-memory object cache service | dummy description | yes  | yes    | core     | 1.4     |        |      |
+| mongodb    | free | MongoDB NoSQL store                      | dummy description | yes  | yes    | core     | 2.4     |        |      |
+| mysql      | free | MySQL database service                   | dummy description | yes  | yes    | core     | 5.5     |        |      |
+| postgresql | free | PostgreSQL database service              | dummy description | yes  | yes    | core     | 9.1     |        |      |
+| rabbitmq3  | free | RabbitMQ message queue                   | dummy description | yes  | yes    | core     | 3.1     |        |      |
+| redis      | free | Redis key-value store service            | dummy description | yes  | yes    | core     | 2.8     |        |      |
++------------+------+------------------------------------------+-------------------+------+--------+----------+---------+--------+------+
 ```
 
 We pick a RabbitMQ service to connect with the application as below. It is strongly recommended that you provide an unique name for the service.
 
 ```
-cf create-service rabbitmq rabbitmq --plan free
+cf create-service rabbitmq3 rabbitmq --plan free
 ```
 
 You should see a response like below.
@@ -50,16 +47,19 @@ You should see a response like below.
 ```
 
 If you run the command
+
 ```
+cf services
 ```
 You should see an output that looks something like below. The column Application that is blank indicates that no application is bound to it (yet).
 
 ```
-+------------------------------+----------------+----------+----------+---------+------+------------------+
-| Space                        | Name           | Service  | Provider | Version | Plan | Applications     |
-+------------------------------+----------------+----------+----------+---------+------+------------------+
-| workshop-org::workshop-space | rabbitmq       | rabbitmq | core     | 2.8     | free |                  
-+------------------------------+----------------+----------+----------+---------+------+------------------+
++----------------------------+----------+-----------+----------+---------+------+--------------+
+| Space                      | Name     | Service   | Provider | Version | Plan | Applications |
++----------------------------+----------+-----------+----------+---------+------+--------------+
+| user101-org::user101-space | rabbitmq | rabbitmq3 | core     | 3.1     | free | node-env     |
+|                            |          |           |          |         |      | pcfdemo      |
++----------------------------+----------+-----------+----------+---------+------+--------------+
 ```
 
 Next, we bind the service to the application using the following command. If necessary, restage the application.
