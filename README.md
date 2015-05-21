@@ -67,6 +67,7 @@ It is recommended that you run through these exercises sequentially since they a
 
 - Exercise 1: [Orgs, Spaces, Domains] (exa1)
 - Exercise 2: [Security Groups] (exa2)
+- Exercise 3: [Adminstering Quotas] (exa3)
 
 ##More Resources
 
