@@ -2,7 +2,7 @@
 
 ##Exercise 8: Blue Green Deployments
 
-[Blue/Green deployments](http://docs.pivotal.io/pivotalcf/devguide/deploy-apps/blue-green.html) are intended to minimize downtime during application upgrades and enable rollback if necessary. The steps are illusrated in the following diagrams.
+[Blue/Green deployments](http://docs.pivotal.io/pivotalcf/devguide/deploy-apps/blue-green.html) are intended to minimize downtime during application upgrades and enable rollback if necessary. The steps are illustrated in the following diagrams.
 
 ![step 1] (http://docs.pivotal.io/pivotalcf/devguide/images/blue-green/blue.png)
 
