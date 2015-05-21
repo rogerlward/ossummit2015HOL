@@ -1,7 +1,7 @@
-##Admin Exercise 2: Quotas
+##Admin Exercise 3: Quotas
 
-When a multi-tenant PaaS like Cloud Foundry, it's essential that
-resources be tracked and managed. Quota plans are used for this purpose,
+With a multi-tenant PaaS like Cloud Foundry, it's essential that
+per-user and per-app resources be capped. Quota plans are used for this purpose,
 and are associated with each org to restrict the  various resources
 available to users in the org. The resources that are managed by
 quotas include:
@@ -41,7 +41,7 @@ cf quota show demo
 To apply a quota to an org:
 
 ```
-stackato quota-org user700-org MYQUOTAPLAN
+cf quota-org user700-org MYQUOTAPLAN
 ```
 
 
@@ -50,8 +50,3 @@ stackato quota-org user700-org MYQUOTAPLAN
 Quotas are used to restrict the resources available to users in an
 org. Similar concepts (not covered here) apply to managing the quotas
 associated with a space.
-
-
-
-
-

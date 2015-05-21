@@ -65,7 +65,7 @@ It is recommended that you run through these exercises sequentially since they a
 
 ##Recommended Exercises - Admin Related
 
-- Exercise 1: [Quotas] (exa1)
+- Exercise 1: [Orgs, Spaces, Domains] (exa1)
 - Exercise 2: [Security Groups] (exa2)
 
 ##More Resources
