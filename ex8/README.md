@@ -2,11 +2,19 @@
 
 ##Exercise 8: Blue Green Deployments
 
-[Blue/Green deployments](http://docs.pivotal.io/pivotalcf/devguide/deploy-apps/blue-green.html) are intended to minimize downtime during application upgrades and enable rollback if necessary. 
+[Blue/Green deployments](http://docs.pivotal.io/pivotalcf/devguide/deploy-apps/blue-green.html) are intended to minimize downtime during application upgrades and enable rollback if necessary. The steps are illusrated in the following diagrams.
 
-We will make a simple change to an application, push it. 
+![step 1] (http://docs.pivotal.io/pivotalcf/devguide/images/blue-green/blue.png)
 
-Call this, the Green deployment. Once we're happy with the Green deployment, we switchover the original route to this new route so that the network traffic is routed to the new application. If we need to rollback to the original Blue Deployment we can do that as well.
+![step 2] (http://docs.pivotal.io/pivotalcf/devguide/images/blue-green/blue-green.png)
+
+![step 3] (http://docs.pivotal.io/pivotalcf/devguide/images/blue-green/map.png)
+
+![step 4] (http://docs.pivotal.io/pivotalcf/devguide/images/blue-green/unmap.png)
+
+We will make a simple change to an application, push it. Call this, the Green deployment.
+
+Once we're happy with the Green deployment, we switchover the original route to this new route so that the network traffic is routed to the new application. If we need to rollback to the original Blue Deployment we can do that as well.
 
 Let's push the application.
 

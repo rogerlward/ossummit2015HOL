@@ -17,7 +17,7 @@ However, we want to provide you choices for deployment. We've tested the exercis
 
 ##Hands-on Labs Cloud Foundry Instance
 
-We will be targeting a Cloud Foundry instance that will being used during the Hands-on Labs.
+We will be targeting a Cloud Foundry instance that has been specially provided for the Hands-on Labs.
 
 Create an alias for stackato as cf. You can create an alias for ```stackato``` as ```cf``` in which case the stackato CLI commands will be approximately similar to the cf CLI commands.
 
