@@ -7,7 +7,7 @@ Make sure you've installed the stackato CLI and created an alias for accessing t
 Target the Cloud Foundry instance by substituting the URL with the one provided and use the following command.
 
 ```
-cf target https://api.15.125.77.39.xip.io
+cf target https://api.15.126.133.139.xip.io
 ```
 
 The output should look something like below.
