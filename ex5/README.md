@@ -29,7 +29,7 @@ The command
 cf apps
 ```
 
-Should yield the following output showing that there are 3 instances of the application running.
+Should yield the following output showing that there are 2 instances of the application running.
 ```
 +-------------+---+-----+---------+------------------------------------------+----------+
 | Application | # | Mem | Health  | URLs                                     | Services |
@@ -38,7 +38,7 @@ Should yield the following output showing that there are 3 instances of the appl
 +-------------+---+-----+---------+------------------------------------------+----------+
 ```
 
-If you browse to the URL and hit the refresh button a few times you'll notice the hosted instance cycling through 3 different values, such as
+If you browse to the URL and hit the refresh button a few times you'll notice the hosted instance cycling through 2 different values, such as
 
 ```
 Instance hosted at  172.17.0.158:58486
